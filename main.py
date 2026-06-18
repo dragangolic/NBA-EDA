@@ -9,13 +9,16 @@ import numpy
 st.set_page_config(page_title="NBA EDA", page_icon="🏀", layout="wide")
 
 st.markdown("""
-Exploratory Data Analysis (EDA) of NBA Player Stats
+Exploratory Data Analysis of NBA Players   
 """)
 
-st.markdown("<hr style='border:1px solid red'>", unsafe_allow_html=True)
+st.markdown("<hr style='border:1px solid #2ecc71'>", unsafe_allow_html=True)
+
+# Sidebar -  Icon
+st.sidebar.image("./Data/nba.png", width=100)
 
 st.sidebar.header('User Input Features')
-st.sidebar.markdown("<hr style='border:1px solid red'>", unsafe_allow_html=True)
+st.sidebar.markdown("<hr style='border:1px solid #2ecc71'>", unsafe_allow_html=True)
 
 selected_year = st.sidebar.selectbox('Pick a Year', list(reversed(range(1950,2020))))
 
@@ -82,7 +85,7 @@ st.markdown(filedownload(df_selected_team), unsafe_allow_html=True)
 
 # Heatmap
 
-st.markdown("<hr style='border:1px solid red'>", unsafe_allow_html=True)
+st.markdown("<hr style='border:1px solid #2ecc71''>", unsafe_allow_html=True)
 
 if st.button('Intercorrelation Heatmap'):
     st.header('Intercorrelation Matrix Heatmap')
@@ -97,7 +100,10 @@ if st.button('Intercorrelation Heatmap'):
     st.pyplot(f)
 
 
-st.markdown("<hr style='border:1px solid red'>", unsafe_allow_html=True)
+st.markdown("<hr style='border:1px solid #2ecc71'>", unsafe_allow_html=True)
 
+st.write("""
+"Some people want it to happen, some wish it would happen, others make it happen." — Michael Jordan
+""")
 
 
